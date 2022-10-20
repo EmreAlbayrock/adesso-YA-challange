@@ -1,0 +1,203 @@
+@import "../../global.scss";
+
+.units {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        margin-bottom: 65px;
+        font-size: 40px;
+    }
+
+    .units-container {
+        width: 100%;
+        max-width: 100vw;
+        display: flex;
+        justify-content: space-around;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid $main;
+            border-radius: 5px;
+            padding: 20px;
+            max-height: 500px;
+
+
+            .age-filter {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 30px;
+                margin-top: 10px;
+
+                h3 {
+                    font-size: 26px;
+                }
+
+                .ages {
+                    display: flex;
+                    list-style: none;
+                    margin-top: 35px;
+
+                    .age-item {
+                        padding: 5px 10px;
+                        margin: 0 5px;
+                        font-size: 22px;
+                        border: 2px solid $main;
+                        border-radius: 10px;
+
+                        &.active {
+                            background-color: $background;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .break {
+                width: 100%;
+                border-color: $main;
+            }
+
+            .cost-filter {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+
+                h3 {
+                    margin-bottom: 35px;
+                    font-size: 26px;
+                }
+
+                .costs-container {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .costs-left {
+                        display: flex;
+                        flex-direction: column;
+
+                        h5 {
+                            margin-bottom: 20px;
+                            font-size: 18px;
+                        }
+
+                        .resources-container {
+
+                            .resource-item {
+                                list-style: none;
+                                padding: 5px 0 5px 0px;
+                                margin: 15px 0;
+                                font-size: 18px;
+                                border: 1px solid $main;
+                                border-radius: 5px;
+                                text-align: center;
+
+                                &:hover {
+                                    cursor: pointer;
+                                }
+
+                                &.active {
+                                    background: $background;
+                                }
+                            }
+                        }
+                    }
+
+                    .costs-right {
+                        display: flex;
+                        flex-direction: column;
+                        
+                        h5 {
+                            margin-bottom: 25px;
+                            font-size: 18px;
+                        }
+
+                        .input-container {
+                            margin: 10px 0;
+
+                            input {
+                                padding: 5px;
+                                width: 50px;
+                                margin: 0 10px 0 0;
+                                font-size: 16px;
+                                text-align: center;
+                                background-color: $background;
+                                outline: none;
+                                border: none;
+                                border-radius: 2px;
+                            }
+
+                            .disabled {
+                                background: gray;
+                                color: white;
+                                cursor: not-allowed;
+                            }
+
+                            span {
+                                margin-right: 10px;
+                            }
+                            
+                            input::-webkit-outer-spin-button,
+                            input::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+                            
+                            input[type=number] {
+                                -moz-appearance: textfield;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 50%;
+
+            .units-table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-bottom: 50px;
+            
+                tr, td, th{
+                    border: 1px solid $main;
+                    padding: 5px 0 5px 0px;
+                    text-align: center;
+
+                    span {
+                        margin: 0 10px 0 10px;
+                    }
+                }
+
+                td:nth-child(2) {
+                    font-weight: bolder;
+                    letter-spacing: 2px;
+
+                    &:hover {
+                        background-color: $background;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
